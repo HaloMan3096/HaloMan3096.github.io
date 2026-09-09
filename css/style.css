@@ -1,0 +1,96 @@
+:root {
+    --background-color: rgba(68, 76, 247, 1);
+    --background-color-transparent: rgba(68, 76, 247, 0.25);
+    --accent-color: rgba(223,83,255, 1);
+    --hover-color: rgba(34,209,238, 1);
+
+    background-color: #E5E5F7;
+    background-image:  radial-gradient(circle at 12px 100%, transparent 11px, var(--background-color-transparent) 11px, var(--background-color-transparent) 12px, transparent 12px), radial-gradient(circle at 12px 0%, transparent 11px, var(--background-color-transparent) 11px, var(--background-color-transparent) 12px, transparent 12px);
+    background-size: 24px 12px;
+    background-position: 0 0, 12px 0;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: "Copperplate Gothic Light", "Arial Narrow", Arial, sans-serif;
+    overflow: auto !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+
+    flex: 1;
+}
+
+a:link {
+    color: darkslategrey;
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+a:active {
+    color: #f1c40f;
+}
+
+header {
+    padding: 1rem;
+
+    margin: 0;
+
+    background-color: var(--background-color);
+    color: black;
+    border-bottom: 1px solid var(--accent-color);
+    box-shadow: 0.2em 0.1em 0.1em rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+footer {
+    background-color: var(--background-color);
+    color: black;
+    border-top: 1px solid var(--accent-color);
+    min-height: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social-icon {
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-social-icon:hover {
+    opacity: 0.8;
+    border: 1px solid var(--accent-color);
+}
